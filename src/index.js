@@ -69,7 +69,7 @@ class App extends Component {
                   Burger
                 </label>
               </div>
-              <div className='nav-group'>
+              {/* <div className='nav-group'>
                 <input
                   className='filter-form'
                   type='radio'
@@ -80,7 +80,7 @@ class App extends Component {
                 <label className='nav-group' htmlFor='dine'>
                   <img className='icon' src='icons/cutlery.png' alt='' /> Dine
                 </label>
-              </div>
+              </div> */}
             </form>
           </div>
 
