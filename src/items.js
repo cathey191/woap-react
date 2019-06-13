@@ -11,8 +11,7 @@ class Items extends Component {
 
   render () {
     if (
-      this.props.allItems[0][1][0].event === 'burger' ||
-      this.props.allItems[0][1][0].event === 'cocktail'
+      this.props.allItems[0][1][0].event === 'burger'
     ) {
       return (
         <div>
@@ -26,6 +25,37 @@ class Items extends Component {
                 <h2 className='item-name'>
                   <img
                     src='./icons/hamburger-meal.png'
+                    alt=''
+                    className='icon-small'
+                  />
+                  {item[1][0].title}
+                </h2>
+                <p>{item[1][0].description}</p>
+
+                <div className='list-bottom'>
+                  <a href={'http://' + item[0].website}>
+                    <button className='btn btn-visit'>Visit Site</button>
+                  </a>
+                </div>
+              </div>
+              <hr className='list-break' />
+            </div>
+          ))}
+        </div>
+      )
+    } else if (this.props.allItems[0][1][0].event === 'cocktail') {
+      return (
+        <div>
+          {this.props.allItems.map((item, i) => (
+            <div className='item' key={i}>
+              <div className='list-item'>
+                <h1>
+                  {item[0].company}
+                  <span className='item-cost'>${item[1][0].price}</span>
+                </h1>
+                <h2 className='item-name'>
+                  <img
+                    src='./icons/cocktail.png'
                     alt=''
                     className='icon-small'
                   />

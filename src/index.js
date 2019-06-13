@@ -131,13 +131,17 @@ class App extends Component {
         type: 'Spirit',
         sortBy: 'Alphabetical',
         currentOptions: {
-          options: [
+          options: [ 
             'All Options',
             'Gin',
-            'Rum',
-            'Vodka',
             'Whiskey',
-            'Wine'
+            'Other',
+            'Vodka',
+            'Tequila',
+            'Wine',
+            'Rum',
+            'Liquor',
+            'Beer' 
           ],
           optionType: 'cocktail/'
         }
@@ -206,6 +210,7 @@ class App extends Component {
           current: 'burger/type:' + option
         })
       } else if (this.state.type === 'Spirit') {
+        console.log(this.state)
         this.setState({
           current: 'cocktail/type:' + option
         })
